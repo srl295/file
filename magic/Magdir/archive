@@ -1822,6 +1822,15 @@
 !:mime	application/vnd.android.package-archive
 !:ext	apk
 
+# Keyman Compiled Package File (keyman.com)
+# https://help.keyman.com/developer/current-version/reference/file-types/kmp
+# Find start of central directory
+>>>(-6.l)   string   PK\001\002
+# Scan central directory for string 'kmp.json', will suffice for a 
+# package containing about 150 files
+>>>>(-6.l)   search/9000   kmp.json   Keyman Compiled Package File
+!:ext kmp
+
 # Zip archives (Greg Roelofs, c/o zip-bugs@wkuvx1.wku.edu)
 0	string		PK\005\006	Zip archive data (empty)
 !:mime application/zip
