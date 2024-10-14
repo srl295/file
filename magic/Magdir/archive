@@ -1888,6 +1888,7 @@
 # Scan central directory for string 'kmp.json', will suffice for a
 # package containing about 150 files
 >>>>(-6.l)	search/9000	kmp.json	Keyman Compiled Package File
+!:mime	application/vnd.keyman.kmp+zip
 !:ext kmp
 
 # Specialised zip formats which start with a member named 'mimetype'
